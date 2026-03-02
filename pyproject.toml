@@ -1,27 +1,55 @@
-[project]
+[tool.poetry]
 name = "document-refinery"
 version = "0.1.0"
-description = "The Document Intelligence Refinery"
-authors = [
-    {name = "Addisu-Taye",email = "addtaye@gmail.com"}
-]
-license = {text = "MIT"}
-requires-python =">=3.11,<4.0"
-dependencies = [
-    "pydantic (>=2.12.5,<3.0.0)",
-    "pdfplumber (>=0.11.9,<0.12.0)",
-    "pymupdf (>=1.27.1,<2.0.0)",
-    "python-dotenv (>=1.2.2,<2.0.0)",
-    "langgraph (>=1.0.10,<2.0.0)",
-    "chromadb (>=1.5.2,<2.0.0)"
-]
+description = "TRP1 Week 3: Document Intelligence Refinery - Agentic Pipeline for Enterprise Document Extraction"
+authors = ["Addisu Taye <addtaye@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/Addisu-Taye/Document-Intelligence-Refinery-Agentic-Pipeline"
+keywords = ["document-intelligence", "pdf-extraction", "rag", "agentic-pipeline", "fde"]
 
+[tool.poetry.dependencies]
+python = "^3.11,4.0"
+# Core extraction
+pdfplumber = "^0.11.4"
+pymupdf = "^1.24.10"
+# Data validation & schemas
+pydantic = "^2.9.2"
+pydantic-settings = "^2.6.1"
+# Configuration
+pyyaml = "^6.0.2"
+python-dotenv = "^1.0.1"
+# Agentic framework
+langgraph = "^0.2.39"
+langchain-core = "^0.3.25"
+# Vector store (local, free tier)
+chromadb = "^0.5.20"
+# HTTP client for VLM APIs
+httpx = "^0.27.2"
+# Utilities
+pandas = "^2.2.3"
+numpy = "^1.26.4"
+tqdm = "^4.67.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+pytest-asyncio = "^0.24.0"
+black = "^24.10.0"
+ruff = "^0.8.1"
+mypy = "^1.13.0"
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
-[dependency-groups]
-dev = [
-    "pytest (>=9.0.2,<10.0.0)"
-]
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "W"]
+ignore = ["E501"]  # Let black handle line length
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
