@@ -7,7 +7,7 @@ that enables LLMs to navigate documents without reading every page.
 """
 
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Literal,  Optional
 from datetime import datetime
 
 

@@ -1,0 +1,64 @@
+# Create the extraction ledger script
+@'
+# scripts/create_extraction_ledger.py
+"""
+Generate extraction_ledger.jsonl from DocumentProfiles.
+
+This ledger logs every extraction decision with strategy, confidence, and cost.
+Required for Interim Submission (Deliverable #7).
+"""
+
+import json
+from pathlib import Path
+from datetime import datetime
+
+def main():
+    profiles_dir = Path(".refinery/profiles")
+    ledger_path = Path(".refinery/extraction_ledger.jsonl")
+    
+    if not profiles_dir.exists():
+        print("❌ No profiles directory found. Run profile_all_corpus.py first.")
+        return
+    
+    ledger_entries = []
+    
+    for profile_file in profiles_dir.glob("*.json"):
+        with open(profile_file, 'r', encoding='utf-8') as f:
+            profile = json.load(f)
+        
+        # Create ledger entry
+        entry = {
+            "timestamp": datetime.utcnow().isoformat() + "Z",
+            "doc_id": profile['doc_id'],
+            "filename": profile['filename'],
+            "page_count": profile['page_count'],
+            "extraction_strategy": profile['recommended_strategy'],
+            "origin_type": profile['origin_type'],
+            "origin_confidence": profile['origin_confidence'],
+            "layout_complexity": profile['layout_complexity'],
+            "layout_confidence": profile['layout_confidence'],
+            "domain_hint": profile['domain_hint'],
+            "cost_estimate": profile['estimated_extraction_cost'],
+            "requires_escalation": profile['requires_escalation'],
+            "escalation_reason": profile.get('escalation_reason'),
+            "metrics": profile.get('metrics', {}),
+            "processing_status": "profiled",
+            "extraction_status": "pending"
+        }
+        
+        ledger_entries.append(entry)
+        print(f"✓ Logged: {profile['filename']} → {profile['recommended_strategy']}")
+    
+    # Write ledger (JSONL format - one JSON per line)
+    with open(ledger_path, 'w', encoding='utf-8') as f:
+        for entry in ledger_entries:
+            f.write(json.dumps(entry, default=str) + "\n")
+    
+    print(f"\n✅ Extraction ledger created: {ledger_path}")
+    print(f"📊 Total entries: {len(ledger_entries)}")
+
+if __name__ == "__main__":
+    main()
+'@ | Set-Content -Path "scripts/create_extraction_ledger.py" -Encoding UTF8
+
+Write-Host "✓ Created: scripts/create_extraction_ledger.py" -ForegroundColor Green

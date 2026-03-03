@@ -7,7 +7,7 @@ verification against the source document. This is critical for enterprise trust.
 """
 
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Literal,  Optional
 from datetime import datetime
 from .ldu import BoundingBox
 

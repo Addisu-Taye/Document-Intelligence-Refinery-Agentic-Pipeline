@@ -7,9 +7,10 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/Addisu-Taye/Document-Intelligence-Refinery-Agentic-Pipeline"
 keywords = ["document-intelligence", "pdf-extraction", "rag", "agentic-pipeline", "fde"]
+packages = [{include = "src"}] 
 
 [tool.poetry.dependencies]
-python = "^3.11,4.0"
+python = "^3.11,<4.0"
 # Core extraction
 pdfplumber = "^0.11.4"
 pymupdf = "^1.24.10"

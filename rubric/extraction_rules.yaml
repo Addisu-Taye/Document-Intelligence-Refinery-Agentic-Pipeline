@@ -1,0 +1,123 @@
+# rubric/extraction_rules.yaml
+# Externalized configuration for extraction thresholds and chunking rules
+# FDEs can tune behavior without code changes
+
+triage:
+  # Pages to sample for document classification
+  sample_pages: [1, 3, 5, 10, -1]  # -1 = last page
+  
+  # Classification thresholds
+  classification:
+    scanned_image:
+      median_char_density_max: 0.0005  # chars per point²
+      median_image_ratio_min: 0.7      # 70% of page is image
+      min_pages_with_text: 2           # Require text on ≥2 sampled pages
+    
+    native_digital:
+      median_char_density_min: 0.001   # chars per point²
+      median_image_ratio_max: 0.4      # <40% image area
+    
+    mixed:
+      char_density_stddev_threshold: 0.002  # High variance = mixed content
+
+confidence_scoring:
+  # Strategy A: Fast Text (pdfplumber/pymupdf)
+  fast_text:
+    weights:
+      char_density: 0.4
+      image_ratio: 0.3
+      table_structure_preserved: 0.2
+      font_metadata_present: 0.1
+    min_confidence_to_proceed: 0.75  # Below this → escalate to Strategy B
+  
+  # Strategy B: Layout-Aware (Docling/MinerU)
+  layout_aware:
+    min_confidence_to_proceed: 0.80  # Below this → escalate to Strategy C
+  
+  # Strategy C: Vision-Augmented (VLM)
+  vision_augmented:
+    min_confidence_to_proceed: 0.90  # Final strategy, no escalation
+
+escalation:
+  fast_text -> layout_aware: true
+  layout_aware -> vision_augmented: true
+  max_escalations_per_doc: 2
+
+cost_limits:
+  vision_augmented:
+    max_tokens_per_doc: 50000
+    max_cost_usd: 2.00
+    rate_per_1k_tokens: 0.0001  # OpenRouter GPT-4o-mini rate
+
+chunking:
+  max_tokens_per_ldu: 512
+  preserve_table_structure: true
+  keep_captions_with_figures: true
+  section_header_as_parent_metadata: true
+  numbered_list_atomic_unit: true
+  cross_reference_resolution: true
+
+# Domain keyword dictionaries (can be extended by FDEs)
+domain_keywords:
+  financial:
+    - "balance sheet"
+    - "income statement"
+    - "cash flow"
+    - "net profit"
+    - "revenue"
+    - "assets"
+    - "liabilities"
+    - "equity"
+    - "EBITDA"
+    - "ROI"
+    - "fiscal year"
+    - "quarterly"
+    - "audit"
+    - "compliance"
+    - "NBE directive"
+    - "liquidity ratio"
+    - "capital adequacy"
+    - "birr"
+    - "ETB"
+    - "bank"
+  
+  legal:
+    - "clause"
+    - "herein"
+    - "whereas"
+    - "plaintiff"
+    - "defendant"
+    - "court"
+    - "jurisdiction"
+    - "statute"
+    - "regulation"
+    - "liability"
+    - "indemnification"
+    - "arbitration"
+    - "contract"
+  
+  technical:
+    - "architecture"
+    - "implementation"
+    - "API"
+    - "endpoint"
+    - "database"
+    - "deployment"
+    - "infrastructure"
+    - "specification"
+    - "protocol"
+    - "integration"
+    - "system"
+    - "module"
+  
+  medical:
+    - "diagnosis"
+    - "treatment"
+    - "patient"
+    - "clinical"
+    - "symptom"
+    - "medication"
+    - "dosage"
+    - "therapy"
+    - "prognosis"
+    - "healthcare"

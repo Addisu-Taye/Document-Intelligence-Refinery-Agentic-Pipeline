@@ -8,9 +8,9 @@ Chunking Engine to work regardless of which strategy was used.
 """
 
 from pydantic import BaseModel, Field
-from typing import Optional
+from typing import Optional, Literal  # ← Literal added here
 from datetime import datetime
-from .ldu import LDU, BoundingBox
+from .ldu import BoundingBox
 
 
 class ExtractedBlock(BaseModel):
