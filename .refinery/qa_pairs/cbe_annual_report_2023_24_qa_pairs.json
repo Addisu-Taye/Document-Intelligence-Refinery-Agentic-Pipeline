@@ -1,0 +1,35 @@
+[
+  {
+    "document_id": "cbe_annual_report_2023_24",
+    "question_number": 1,
+    "question": "What was the net profit for FY 2023-24?",
+    "answer": "No structured facts available.",
+    "confidence": 0.5,
+    "retrieval_method": "hybrid",
+    "verification_status": "unverifiable",
+    "citations": [],
+    "timestamp": "2026-03-05T15:22:05.952739+00:00"
+  },
+  {
+    "document_id": "cbe_annual_report_2023_24",
+    "question_number": 2,
+    "question": "What are the total assets of the bank?",
+    "answer": "No structured facts available.",
+    "confidence": 0.5,
+    "retrieval_method": "hybrid",
+    "verification_status": "unverifiable",
+    "citations": [],
+    "timestamp": "2026-03-05T15:22:05.954148+00:00"
+  },
+  {
+    "document_id": "cbe_annual_report_2023_24",
+    "question_number": 3,
+    "question": "What is the bank's capital adequacy ratio?",
+    "answer": "No relevant content found.",
+    "confidence": 0.3,
+    "retrieval_method": "hybrid",
+    "verification_status": "unverifiable",
+    "citations": [],
+    "timestamp": "2026-03-05T15:22:06.018269+00:00"
+  }
+]

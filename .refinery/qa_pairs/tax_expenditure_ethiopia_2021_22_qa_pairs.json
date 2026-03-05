@@ -1,0 +1,35 @@
+[
+  {
+    "document_id": "tax_expenditure_ethiopia_2021_22",
+    "question_number": 1,
+    "question": "What is the total tax expenditure for the reporting period?",
+    "answer": "Found 5 relevant passages:\n\n1. 4. Tax expenditure estimates...\n2. Understanding, estimating and reporting on tax expenditures is an important exercise in...\n3. of tax expenditures....\n",
+    "confidence": 0.75,
+    "retrieval_method": "hybrid",
+    "verification_status": "unverifiable",
+    "citations": [],
+    "timestamp": "2026-03-05T15:22:07.370822+00:00"
+  },
+  {
+    "document_id": "tax_expenditure_ethiopia_2021_22",
+    "question_number": 2,
+    "question": "Which sectors received the largest tax incentives?",
+    "answer": "Found 5 relevant passages:\n\n1. preferential tax treatments for certain sectors and producers to encourage and expand...\n2. The intended effects of such tax policy measures and incentives are mainly:...\n3. revenue. Even though the law stipulates that businesses benefiting from tax incentives are to file...\n",
+    "confidence": 0.75,
+    "retrieval_method": "hybrid",
+    "verification_status": "unverifiable",
+    "citations": [],
+    "timestamp": "2026-03-05T15:22:07.513405+00:00"
+  },
+  {
+    "document_id": "tax_expenditure_ethiopia_2021_22",
+    "question_number": 3,
+    "question": "What is the revenue foregone from import tax exemptions?",
+    "answer": "No structured facts available.",
+    "confidence": 0.5,
+    "retrieval_method": "hybrid",
+    "verification_status": "unverifiable",
+    "citations": [],
+    "timestamp": "2026-03-05T15:22:07.521107+00:00"
+  }
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "document_id": "fta_performance_survey_final_rep",
+    "question_number": 1,
+    "question": "What are the key findings on financial transparency?",
+    "answer": "Found 5 relevant passages:\n\n1. Assessment of Financial\nTransparency and Accountability\n(FTA) Implementation in Ethiopia\nFinal Report\nRFP No: ET-NCB-MOFEC-COPCU-129904-CS-QCBS\nSUBMITTED TO:\nMinistry of Finance (MoF)\nAddis Ababa, Eth...\n2. 5. Determinants of local government transparency\nIn this section, we explore the economic, social, and institutional determinants that affect the\ntransparency of local governments. The analysis builds...\n3. Sidama 5 15 60 165 225\nSWEP 9 27 120 285 405\nSomali 12 36 162 378 540\nGambella 4 12 60 120 180\nHarari 3 9 30 105 135\nBenishangul-Gumuz 3 9 45 90 135\nAddis Ababa 17 51 765 0 765\nDire Dawa 3 9 135 0 135...\n",
+    "confidence": 0.75,
+    "retrieval_method": "hybrid",
+    "verification_status": "verified",
+    "citations": [
+      {
+        "document_name": "fta_performance_survey_final_rep.pdf",
+        "page_number": 116,
+        "bounding_box": null,
+        "content_hash": "8a8a84871e71dfde9c9c41e7ae3ec54b9f30a9a05a14cb913d78d2cdc1776fe2",
+        "cited_text": "revenue\n3 ",
+        "extraction_strategy": "layout_aware",
+        "extraction_confidence": 0.8
+      }
+    ],
+    "timestamp": "2026-03-05T15:22:06.236968+00:00"
+  },
+  {
+    "document_id": "fta_performance_survey_final_rep",
+    "question_number": 2,
+    "question": "What recommendations were made for improvement?",
+    "answer": "Found 5 relevant passages:\n\n1. 14. Strength and Weakness\nThree most important strengths and limitations of the FTA initiative? What do you suggest to\nimprove the limitations? (5 important methods of improving FTA activities), any o...\n2. Headers: col_0 | col_1 | col_2 | col_3 | col_4 | col_5 | bank/donors | col_7 | col_8 | col_9\nData:\n |  |  |  |  |  | 3. CSO/Local NGO |  |  | \n |  |  |  |  |  | 4. I don`t know |  |  | \n |  |  |  |  |...\n3. poor services and\nunacceptable practices in\nthe health, education,\nagriculture or any other\nsector?\nF10 Is there any feedback 1. Yes\nmechanism to collect 2. No\nand disseminate 3. I don\u2019t know\ninformat...\n",
+    "confidence": 0.75,
+    "retrieval_method": "hybrid",
+    "verification_status": "verified",
+    "citations": [
+      {
+        "document_name": "fta_performance_survey_final_rep.pdf",
+        "page_number": 116,
+        "bounding_box": null,
+        "content_hash": "8a8a84871e71dfde9c9c41e7ae3ec54b9f30a9a05a14cb913d78d2cdc1776fe2",
+        "cited_text": "revenue\n3 ",
+        "extraction_strategy": "layout_aware",
+        "extraction_confidence": 0.8
+      }
+    ],
+    "timestamp": "2026-03-05T15:22:06.340970+00:00"
+  },
+  {
+    "document_id": "fta_performance_survey_final_rep",
+    "question_number": 3,
+    "question": "Which ministries were assessed in the survey?",
+    "answer": "Found 5 relevant passages:\n\n1. 3. Birr 2001-4000\n4. Birr 4001-7000\n5. Above 7000\n6 No answer\n7.I don\u2019t know\n18 Which of the following categories would 1. Very poor\nyou categorize yourself belong as 2. Poor\ncompared to with your nei...\n2. 2.1. Study design\nA mixed-method is used, which involves collecting both quantitative and qualitative data.\nStructured and semi-structured survey tools were used to collect data from citizens and key\n...\n3. Overall, the assessment revealed a mixed result. Encouraging results emerge if one looks at\nthe progress since 2009 (the baseline period).\n\uf0b7 Understanding of the budget process is increasing\n\uf0b7 Engagem...\n",
+    "confidence": 0.75,
+    "retrieval_method": "hybrid",
+    "verification_status": "verified",
+    "citations": [
+      {
+        "document_name": "fta_performance_survey_final_rep.pdf",
+        "page_number": 116,
+        "bounding_box": null,
+        "content_hash": "8a8a84871e71dfde9c9c41e7ae3ec54b9f30a9a05a14cb913d78d2cdc1776fe2",
+        "cited_text": "revenue\n3 ",
+        "extraction_strategy": "layout_aware",
+        "extraction_confidence": 0.8
+      }
+    ],
+    "timestamp": "2026-03-05T15:22:06.417909+00:00"
+  }
+]

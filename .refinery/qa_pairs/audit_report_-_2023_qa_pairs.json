@@ -1,0 +1,35 @@
+[
+  {
+    "document_id": "audit_report_-_2023",
+    "question_number": 1,
+    "question": "What is the auditor's opinion on the financial statements?",
+    "answer": "Found 1 relevant passages:\n\n1. INDEPENDENT AUDiTOR\u2019S REPORT\nAND\nFiNANCiAL STATEMENTS\n30 JUNE 2023\nDEVELOPMENT BANK OF ETHIOPIA\nYour Development partner!...\n",
+    "confidence": 0.75,
+    "retrieval_method": "hybrid",
+    "verification_status": "unverifiable",
+    "citations": [],
+    "timestamp": "2026-03-05T15:22:06.093257+00:00"
+  },
+  {
+    "document_id": "audit_report_-_2023",
+    "question_number": 2,
+    "question": "Were there any material misstatements found?",
+    "answer": "Found 1 relevant passages:\n\n1. INDEPENDENT AUDiTOR\u2019S REPORT\nAND\nFiNANCiAL STATEMENTS\n30 JUNE 2023\nDEVELOPMENT BANK OF ETHIOPIA\nYour Development partner!...\n",
+    "confidence": 0.75,
+    "retrieval_method": "hybrid",
+    "verification_status": "unverifiable",
+    "citations": [],
+    "timestamp": "2026-03-05T15:22:06.124269+00:00"
+  },
+  {
+    "document_id": "audit_report_-_2023",
+    "question_number": 3,
+    "question": "What is the reporting period covered?",
+    "answer": "Found 1 relevant passages:\n\n1. INDEPENDENT AUDiTOR\u2019S REPORT\nAND\nFiNANCiAL STATEMENTS\n30 JUNE 2023\nDEVELOPMENT BANK OF ETHIOPIA\nYour Development partner!...\n",
+    "confidence": 0.75,
+    "retrieval_method": "hybrid",
+    "verification_status": "unverifiable",
+    "citations": [],
+    "timestamp": "2026-03-05T15:22:06.159030+00:00"
+  }
+]
