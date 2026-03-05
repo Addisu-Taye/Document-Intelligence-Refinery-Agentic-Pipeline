@@ -1,0 +1,7 @@
+{
+  "total_embeddings": 2265,
+  "persist_directory": "E:\\TRP1\\WEEK-3\\document-refinery\\.refinery\\vector_store",
+  "collection_name": "ldu_embeddings",
+  "model": "all-MiniLM-L6-v2",
+  "chromadb_version": "0.5.23"
+}

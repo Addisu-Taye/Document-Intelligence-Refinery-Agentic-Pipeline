@@ -32,6 +32,7 @@ pandas = "^2.2.3"
 numpy = "^1.26.4"
 tqdm = "^4.67.1"
 streamlit = "^1.55.0"
+sentence-transformers = "^5.2.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.3"
