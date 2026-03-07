@@ -122,7 +122,7 @@ def main():
     if 'stage_results' not in st.session_state:
         st.session_state.stage_results = {}
     if 'use_fallback' not in st.session_state:
-        st.session_state.use_fallback = not PIPELINE_AVAILABLE  # Auto-enable fallback if pipeline unavailable
+        st.session_state.use_fallback = False
 
     # --- SIDEBAR ---
     with st.sidebar:

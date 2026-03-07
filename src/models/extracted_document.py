@@ -139,3 +139,18 @@ class ExtractedDocument(BaseModel):
                 "escalation_log": [{"from_strategy": "fast_text", "to_strategy": "layout_aware", "reason": "low confidence"}]
             }
         }
+# ============================================================================
+# COMPATIBILITY ALIASES (for pipeline agents)
+# ============================================================================
+
+class Block(ExtractedBlock):
+    """Compatibility alias for ExtractedBlock - used by pipeline agents."""
+    pass
+
+
+class Table(BaseModel):
+    """Compatibility Table class for pipeline agents."""
+    headers: list[str] = []
+    rows: list[list[str]] = []
+    page_refs: list[int] = []
+    table_id: str = ""
